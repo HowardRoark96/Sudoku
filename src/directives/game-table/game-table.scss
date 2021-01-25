@@ -1,0 +1,82 @@
+$white-color: #ffffff;
+$black-color: #000000;
+$grey-color: #afafaf;
+$light-red-color: #fdffbf;
+$light-grey-color: #afafaf67;
+
+.game {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    color: $black-color;
+}
+
+.game-table {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    min-height: 500px;
+    border: 2px solid $black-color;
+
+    .game-row {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row;
+        justify-content: space-between;
+
+
+        .game-cell{
+            position: relative;
+            flex-grow: 1;
+            border-right: 1px solid $grey-color;
+            border-bottom: 1px solid $grey-color;
+
+            &:hover {
+                background-color: $light-grey-color;
+            }
+    
+            &:last-child {
+                border-right: none;
+            }
+
+            &-selected, &-selected:hover {
+                background-color: $light-red-color;
+            }
+
+            .cell-value {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                pointer-events: none;
+                font-size: 200%;
+            }
+        }
+    }
+}
+
+.game-table::before {
+    z-index: 10;
+    position: absolute;
+    top: 33.2%;
+    left: 0;
+    width: 100%;
+    height: 33%;
+    content: '';
+    border-top: 2px solid $black-color;
+    border-bottom: 2px solid $black-color;
+    pointer-events: none;
+}
+
+.game-table::after {
+    position: absolute;
+    top: 0;
+    left: 33.2%;
+    width: 33%;
+    height: 100%;
+    content: '';
+    border-right: 2px solid $black-color;
+    border-left: 2px solid $black-color;
+    pointer-events: none;
+}

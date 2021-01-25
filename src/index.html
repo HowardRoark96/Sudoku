@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="sudokuApp" lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sudoku</title>
+  <script src="/node_modules/angular/angular.js"></script>
 </head>
+
 <body>
   <div class="running-line">
     <i class="icon icon-notification icon-red bg-icon">&#128276;</i>
@@ -14,9 +17,8 @@
     </marquee>
   </div>
   <h1 style="text-align: center;">SUDOKU v0.1</h1>
-  <div style="text-align: center;">
-    <img src="../public/img/gomer.gif" alt="Gomer">
-    <p>...Doing some work...</p>
-  </div>
+
+  <!-- Game table -->
+  <game-table></game-table>
 </body>
 </html>
