@@ -1,13 +1,13 @@
 $white-color: #ffffff;
 $black-color: #000000;
 $grey-color: #afafaf;
-$light-red-color: #fdffbf;
+$light-yellow-color: #fdffbf;
 $light-grey-color: #afafaf67;
+$light-blue-color: #83c9f8;
 
 .game {
     width: 500px;
     height: 500px;
-    margin: 0 auto;
     color: $black-color;
 }
 
@@ -25,7 +25,6 @@ $light-grey-color: #afafaf67;
         flex-direction: row;
         justify-content: space-between;
 
-
         .game-cell{
             position: relative;
             flex-grow: 1;
@@ -40,10 +39,6 @@ $light-grey-color: #afafaf67;
                 border-right: none;
             }
 
-            &-selected, &-selected:hover {
-                background-color: $light-red-color;
-            }
-
             .cell-value {
                 position: absolute;
                 top: 50%;
@@ -52,6 +47,10 @@ $light-grey-color: #afafaf67;
                 pointer-events: none;
                 font-size: 200%;
             }
+        }
+
+        .highlight-cell {
+            background-color: $light-blue-color;
         }
     }
 }

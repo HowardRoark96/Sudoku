@@ -1,4 +1,6 @@
 import './styles/index.scss';
+import 'normalize.css';
+import '../node_modules/font-awesome/scss/font-awesome.scss';
 
 import './app.module';
 import './modules';
