@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="sudokuApp" ng-jq="jQueryLib" lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="/node_modules/angular/angular.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
   <title>Sudoku</title>
 </head>
+
 <body>
   <div class="running-line">
     <i class="icon icon-notification icon-red bg-icon">&#128276;</i>
@@ -13,10 +17,14 @@
       <span class="build-info">Build 1.0</span>
     </marquee>
   </div>
-  <h1 style="text-align: center;">SUDOKU v0.1</h1>
-  <div style="text-align: center;">
-    <img src="../public/img/gomer.gif" alt="Gomer">
-    <p>...Doing some work...</p>
+  <h4 style="text-align: center;">SUDOKU v0.1</h4>
+
+  <!-- Game table -->
+  <div class="game-wrapper">
+    <game-table selected-item="ctrl.selectedItem">
+    </game-table>
+    <game-control-panel selected-item="ctrl.selectedItem">
+    </game-control-panel>
   </div>
 </body>
 </html>
